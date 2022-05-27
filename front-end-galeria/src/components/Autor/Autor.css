@@ -1,0 +1,94 @@
+.autores {
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    max-width: 90%;
+    margin:0 auto;
+}
+
+.autor {
+    box-sizing: border-box;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 6px;
+    border: 1px solid #d1ae6c;
+    border-radius: 5px;
+    background-color: #f4e9ed;
+}
+
+
+.autor:hover {
+    transition: 0.2s;
+    padding-left: 7px;
+}
+
+
+.autor p {
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.button-edit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.button-excluded {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.button-excluded:hover {
+    transition: 0.2s;
+    background-color: #d1ae6c;
+}
+
+.button-edit:hover {
+    transition: 0.2s;
+    background-color: #d1ae6c;
+}
+
+.btnCadastrar {
+    background-color: #36de0ce1 ;/* Green */
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    float: right;
+}
+
+.btnCadastrar:hover {
+    background-color: #d1ae6c;
+    transition: 0.2s;
+}
+
+.container-btn{
+    box-sizing: border-box;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 15px;
+}

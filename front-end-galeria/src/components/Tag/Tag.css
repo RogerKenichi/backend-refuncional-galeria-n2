@@ -1,0 +1,54 @@
+.tagItem {
+    --tag_largura: 126px;
+    --tag_border_radius: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    position: relative;
+    color: white;
+    display: inline-block;
+}
+
+.btn-tag {
+    background-color: #72a8e6;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 8px 20px;
+}
+
+.tag-image {
+    border-radius: var(--tag_border_radius);
+    height: var(--tag_largura);
+    width: var(--tag_largura);
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.btn-tag:hover, .tagItem:hover {
+    animation-name: tagOnHover;
+    animation-duration: 0.25s;
+    filter: brightness(80%);
+}
+@keyframes tagOnHover {
+    from {
+        filter: brightness(100%);
+    }
+    to {
+        filter: brightness(80%);
+    }
+}
+
+.tag-nome {
+    position: absolute;
+    border-radius: var(--tag_border_radius);
+    width: var(--tag_largura);
+    text-align: center;
+    vertical-align: text-bottom;
+    bottom: 0px;
+}

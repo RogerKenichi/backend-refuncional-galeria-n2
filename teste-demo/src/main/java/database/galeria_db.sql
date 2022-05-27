@@ -1,7 +1,7 @@
 
-DROP DATABASE galeria_n2;
-CREATE DATABASE galeria_n2;
-USE galeria_n2;
+DROP DATABASE db_galeria;
+CREATE DATABASE db_galeria;
+USE db_galeria;
 
 
 CREATE TABLE tb_autor (
@@ -174,11 +174,31 @@ BEGIN
     UPDATE tb_autor SET autor_nome = p_autor_nome_novo, autor_descricao = p_autor_descricao_novo, cod_autor_img_preview = p_cod_img_preview WHERE SK_autor_id = p_autor_id;
 END //
 
+CREATE PROCEDURE sp_update_imagem(IN p_imagem_id int, IN p_autor int, IN p_descricao varchar(1024))
+BEGIN
+    UPDATE tb_imagem SET FK_autor_id = p_autor, img_descricao = p_descricao WHERE SK_imagem_id = p_imagem_id;
+END //
+
+/*
 CREATE PROCEDURE sp_update_tag(IN p_tag_id int, p_fk_id_novo int, IN p_tag_descricao_novo varchar(128), IN p_cod_tag_img_preview int)
 BEGIN
     UPDATE tb_tag SET FK_tag_id = p_fk_id_novo, tag = p_tag_descricao_novo, cod_tag_img_preview = p_cod_tag_img_preview WHERE SK_tag_id = p_tag_id;
 END //
+*/
+
+CREATE PROCEDURE sp_update_tag(IN p_tag_id int, IN p_tag_descricao_novo varchar(128), IN p_cod_tag_img_preview int)
+BEGIN
+    UPDATE tb_tag SET tag = p_tag_descricao_novo, cod_tag_img_preview = p_cod_tag_img_preview WHERE SK_tag_id = p_tag_id;
+END //
+
+
 
 
 
 DELIMITER ;
+
+
+
+select*from tb_imagem i inner join tb_imagemxtags t on i.SK_imagem_id = t.FK_imagem_id where t.FK_tag_id = 7;
+
+select*from tb_imagem i inner join tb_autor a on i.FK_autor_id = a.SK_autor_id where a.SK_autor_id = 1;

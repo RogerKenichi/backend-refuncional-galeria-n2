@@ -1,0 +1,51 @@
+#container {
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    max-width: 90%;
+    margin:0 auto;
+}
+
+.card {
+    background-color: teal;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 8px;
+    opacity:1;
+    text-align: center;
+}
+
+.imagemPequena {
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: cover;
+}
+
+.card:nth-child(5n+1) {
+    clear:both;
+  }
+
+.card:hover {
+    opacity:1;
+    webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.2);
+        transition: 0.2s;
+}
+
+.desc {
+    margin-top: 160px;
+    background-color: darkgrey;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    opacity:0.5;
+}

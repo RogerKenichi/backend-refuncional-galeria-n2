@@ -1,0 +1,11 @@
+.imagemGrande {
+    max-height: 600px;
+}
+
+.detalhesImagemTags {
+    display: inline-block;
+}
+
+.imagemEditar {
+    max-height: 300px;
+}
